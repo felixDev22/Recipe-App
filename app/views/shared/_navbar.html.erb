@@ -1,20 +1,17 @@
 <nav>
   <div >
-    <%= link_to "Recipe App", root_path%>
+    <%= link_to "Recipe App"%>
     <% if user_signed_in?%>
     <div>
       <ul>
         <li >
-          <%= link_to "Foods", foods_path%>
+          <%= link_to "Foods"%>
         </li>
         <li >
           <%= link_to "Recipies"%>
         </li>
         <li>
           <%= link_to "Public Recipies", "/public_recipes"%>
-        </li>
-        <li >
-          <%= link_to "Inventories", inventories_path%>
         </li>
       </ul>
       <%end%>
