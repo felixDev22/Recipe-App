@@ -25,10 +25,10 @@
              <%= button_to "logout", destroy_user_session_path , method: :delete  %>
               </li>
          <% else %>
-            <li class="nav-item">
+            <li>
               <%= link_to "Login", '/users/sign_in'%>
                </li>
-          <li class="nav-item">
+          <li>
               <%= link_to "Sign up", '/users/sign_up'%>
                </li>
          <% end %>
