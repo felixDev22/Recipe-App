@@ -1,3 +1,4 @@
+<div class='container'>
 <h2>Add a new food</h2>
 
 <%= form_with model: @food, url: foods_path do |f| %>
@@ -20,4 +21,5 @@
   <div class="actions">
     <%= f.submit "Add food", class: "mt-4 btn btn-success" %>
   </div>
-<% end %>
+  <% end %>
+</div>
