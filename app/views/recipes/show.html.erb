@@ -1,11 +1,44 @@
-<div class="container">
-<p style="color: green"><%= notice %></p>
+<h2 class="mt-4">
+  <%= @recipe.name %>
+</h2>
 
-<%= render @recipe %>
+<p> Preperation Time: <%= @recipe.preparation_time %> </p>
 
-<div>
-  <%= link_to "Edit this recipe", edit_recipe_path(@recipe) %> |
-  <%= link_to "Back to recipes", recipes_path %>
-  <%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<p> Cooking Time: <%= @recipe.cooking_time %> </p>
+
+<p> Description: <%= @recipe.description %> </p>
+
+<% if can? :manage, @recipe %>
+<% if @recipe.public %>
+  <%= button_to "Make private", toggle_public_path(@recipe.id), method: :patch, class: "btn btn-success" %>
+<% else %>
+  <%= button_to "Make public", toggle_public_path(@recipe.id), method: :patch, class: "btn btn-outline-danger" %> 
+<% end %>
+<% end %>
+
+<% if @recipe.user_id == current_user.id %>
+  <%= button_to "Delete recipe", recipe_path(@recipe.id), method: :delete, class: "btn btn-danger mt-2" %>
+<% end %>
+
+<div class="table-responsive mt-4">
+
+  <div class="d-flex justify-content-between"> 
+    <%= link_to "Add ingredient", new_recipe_recipe_food_path(@recipe.id), class: "btn btn-success" %>
+    <%# <%= link_to 'Generate shopping list', recipe_shopping_list_path(@recipe.id), class: 'btn btn-outline-dark' %> 
+    <%= render 'generatepopup' %>
+  </div>
+
+  <table class="table table-light table-bordered mt-4">
+    <thead>
+      <tr>
+        <th scope="col">Food</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Value</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
 </div>
-</div>
+

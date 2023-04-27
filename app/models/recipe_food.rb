@@ -1,4 +1,4 @@
 class RecipeFood < ApplicationRecord
-  has_many :recipe_foods, class_name: 'RecipeFood'
+  belongs_to :recipe
   belongs_to :food
 end
