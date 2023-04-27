@@ -6,5 +6,7 @@ Rails.application.routes.draw do
      resources :general_shopping_list, only: [:index ,:show]
   end
 
+  match 'recipes/:recipe_id' => 'recipes#toggle_public', as: :toggle_public, via: :patch
+
   root "home#index"
 end
