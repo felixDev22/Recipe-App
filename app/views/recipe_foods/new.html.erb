@@ -1,4 +1,3 @@
-<div class='container'>
 <h2> Add a new ingredient </h2>
 
 <%= form_with model: @ingredient, url: recipe_recipe_foods_path(@recipe.id), local: true do |form| %>
@@ -16,4 +15,3 @@
     <%= form.submit "Add ingredient", class: "btn btn-primary mt-3" %>
   </div >
 <% end %>
-</div>
