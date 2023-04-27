@@ -1,3 +1,4 @@
+<div class="container">
 <h2> Add a new recipe </h2>
 
 <%= form_with model: @recipe, url: recipes_path, local: true do |form| %> 
@@ -31,5 +32,5 @@
     <%= form.submit "Create recipe", class: "btn btn-success mt-3" %>
   </div>
 <% end %>
-
+</div>
 
