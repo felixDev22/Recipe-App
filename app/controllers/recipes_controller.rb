@@ -54,7 +54,6 @@ class RecipesController < ApplicationController
     @foods = []
     @recipe_food = RecipeFood.where(recipe_id: params[:recipe_id])
     @recipe_food.each do |rf|
-      found = false
       check_recipe_food = Food.find(rf.food_id)
       @quantity << [rf.quantity, check_recipe_food.price]
       @foods << check_recipe_food.name
