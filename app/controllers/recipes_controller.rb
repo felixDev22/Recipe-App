@@ -46,37 +46,23 @@ class RecipesController < ApplicationController
   end
 
   def generate_list
-    redirect_to shopping_list_path(params[:recipe_id], params[:inventory])
+    redirect_to shopping_list_path(params[:recipe_id])
   end
 
-  # def generate
-  #   @quantity = []
-  #   @foods = []
-  #   @recipe_food = RecipeFood.where(recipe_id: params[:recipe_id])
-  #   @recipe_food.each do |rf|
-  #     found = false
-  #     check_recipe_food = Food.find(rf.food_id)
-  #     @inventory_food.each do |each|
-  #       check_inventory_food = Food.find(each.food_id)
-  #       next unless check_inventory_food.name == check_recipe_food.name
-
-  #       found = true
-  #       required = rf.quantity - each.quantity
-  #       if required.positive?
-  #         @quantity << [required, check_inventory_food.price]
-  #         @foods << check_inventory_food.name
-  #       end
-  #     end
-  #     next if found
-
-  #     @quantity << [rf.quantity, check_recipe_food.price]
-  #     @foods << check_recipe_food.name
-  #   end
-  #   @total = 0
-  #   @quantity.each do |q|
-  #     @total += q[0].to_i * q[1].to_i
-  #   end
-  # end
+  def generate
+    @quantity = []
+    @foods = []
+    @recipe_food = RecipeFood.where(recipe_id: params[:recipe_id])
+    @recipe_food.each do |rf|
+      check_recipe_food = Food.find(rf.food_id)
+      @quantity << [rf.quantity, check_recipe_food.price]
+      @foods << check_recipe_food.name
+    end
+    @total = 0
+    @quantity.each do |q|
+      @total += q[0].to_i * q[1].to_i
+    end
+  end
 
   private
 
