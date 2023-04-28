@@ -99,8 +99,6 @@ To run tests, run the following command accordingly:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
 ## 👥 Author <a name="author"></a>
 
 👤 **Felix Nzomo Nyamai**
@@ -117,16 +115,12 @@ To run tests, run the following command accordingly:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
-
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Improve on the UI front-end
 - [ ] Allow users to add comments
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -136,15 +130,11 @@ Feel free to check the [issues page](https://github.com/felixDev22/Recipe-App/is
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project then don't forget to give a star star on this repository
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🤝 Acknowledgement <a name="Acknowledgement"></a>
 
