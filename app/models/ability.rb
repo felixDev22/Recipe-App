@@ -9,6 +9,7 @@ class Ability
     can :manage, Recipe, user_id: user.id
     can :manage, RecipeFood, user_id: user.id
     can :manage, Food, user_id: user.id
+    can :read, Recipe, public: true
     # Define abilities for the user here. For example:
     #
     #   return unless user.present?
